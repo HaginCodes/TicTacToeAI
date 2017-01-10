@@ -21,7 +21,7 @@ public class TicTacToe {
 			b.displayBoard();
 		}
 		
-		while (!b.isGamerOver()){
+		while (!b.isGameOver()){
 			boolean moveOk = true;
 			
 			do{
@@ -37,7 +37,7 @@ public class TicTacToe {
 			
 			b.displayBoard();
 			
-			if(b.isGamerOver())
+			if(b.isGameOver())
 				break;
 			
 			b.minimax(0, Board.PLAYER_X);
@@ -49,11 +49,11 @@ public class TicTacToe {
 		}
 		
 		if(b.hasPlayerWon(Board.PLAYER_X))
-			System.out.println("Loser !");
+			System.out.println("That's an L for you 🖕🏾");
 		else if(b.hasPlayerWon(Board.PLAYER_O))
-			System.out.println("Wow you won congrats");
+			System.out.println("Wow you won congrats 🖕🏾");
 		else 
-			System.out.println("Draw! close game ");
+			System.out.println("Draw! You can't win ;) ");
 		
 	}
 }
